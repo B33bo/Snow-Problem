@@ -11,7 +11,7 @@ class GamePanel extends JPanel implements MouseListener {
 
     public GamePanel() {
         gameManager = new GameManager(5, 4);
-        gameManager.LoadLevel(4);
+        gameManager.LoadLevel(1);
     }
 
     public void ResetButtonClicked() {
