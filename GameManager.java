@@ -19,6 +19,8 @@ public class GameManager {
     public int GetHeight() { return height; }
     public int GetMoves() { return moves; }
 
+    public int GetHighscore() { return LevelLoader.GetHighScore(level); }
+
     public void LoadLevel(int level) {
         LevelLoader.Load(items, level);
     }
@@ -146,6 +148,9 @@ public class GameManager {
             else{
                 MoveInDirection(dx, dy);
             }
+
+            if (LevelCompleted())
+                LevelLoader.TrySetHighScore(level, moves);
             return;
         }
 

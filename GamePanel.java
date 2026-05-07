@@ -59,9 +59,16 @@ class GamePanel extends JPanel implements MouseListener {
             moveCountText.setForeground(Color.red);
         }
         else {
-            moveCountText.setText(" Moves: " + gameManager.GetMoves());
+            String movesText = " Moves: " + gameManager.GetMoves();
+            int currentHighscore = gameManager.GetHighscore();
+
+            if (currentHighscore > 0)
+                movesText += " Highscore: " + currentHighscore;
+
+            moveCountText.setText(movesText);
             moveCountText.setForeground(Color.BLACK);
         }
+
         nextLevelButton.setEnabled(gameManager.LevelCompleted());
     }
 

@@ -5,6 +5,7 @@ import javax.swing.*;
 public class SnowProblem {
 
     public static void main(String[] args) {
+        LevelLoader.LoadHighScoreTable();
         JFrame frame = new JFrame("Snow Problem");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(600, 500);

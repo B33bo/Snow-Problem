@@ -8,10 +8,16 @@ public class SnowmanHead extends MovableItem {
 
     private static BufferedImage redSprite, blueSprite, yellowSprite;
 
-    public static void LoadSprites() throws IOException {
-        redSprite = ImageIO.read(new File("./resources/head_red.png"));
-        blueSprite = ImageIO.read(new File("./resources/head_blue.png"));
-        yellowSprite = ImageIO.read(new File("./resources/head_yellow.png"));
+    public static void LoadSprites() {
+        try {
+            redSprite = ImageIO.read(new File("./resources/head_red.png"));
+            blueSprite = ImageIO.read(new File("./resources/head_blue.png"));
+            yellowSprite = ImageIO.read(new File("./resources/head_yellow.png"));
+        } catch (IOException e) {
+            redSprite = null;
+            blueSprite = null;
+            yellowSprite = null;
+        }
     }
     
     public SnowmanHead(int x, int y, SnowmanColor color) {
