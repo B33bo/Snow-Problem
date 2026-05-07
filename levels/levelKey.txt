@@ -1,0 +1,7 @@
+s = small snowball
+S = large snowball
+. = blank
+b = blue head
+r = red head
+y = yellow head
+# = tree
