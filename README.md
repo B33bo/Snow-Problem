@@ -11,9 +11,9 @@ Must be in the source folder
 ### Linux
 
 ```
+javac *.java -d ./Compilation
 cp -R ./levels ./Compilation/levels
 cp -R ./resources ./Compilation/resources
-javac *.java -d ./Compilation
 ```
 
 ### Windows
